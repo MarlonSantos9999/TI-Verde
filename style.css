@@ -14,7 +14,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 
 body {
   margin: 0;
@@ -75,30 +75,69 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
 
 .hero-descricao { max-width: 510px; margin-bottom: 31px; color: #d0ded5; font-size: 1.12rem; }
 .hero-botoes { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-.botao { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 12px 19px; border-radius: 3px; font-size: 0.88rem; font-weight: 700; transition: transform 0.2s, background 0.2s; }
-.botao:hover { transform: translateY(-3px); }
+.botao { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 12px 19px; border-radius: 3px; font-size: 0.88rem; font-weight: 700; transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease; }
+.botao:hover { transform: translateY(-2px); }
+.botao:active { transform: translateY(0) scale(0.98); }
+.botao:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--limao); outline-offset: 4px; }
 .botao-principal { color: var(--verde-escuro); background: var(--limao); }
 .botao-principal span, .botao-claro span { font-size: 1.1rem; }
 .botao-secundario { color: var(--branco); border-bottom: 1px solid var(--limao); border-radius: 0; padding: 12px 2px; }
 
 .hero-ilustracao { height: 480px; position: relative; }
 .orbita { position: absolute; border: 1px solid rgba(216,241,95,0.35); border-radius: 50%; transform: rotate(-24deg); }
-.orbita-externa { width: 420px; height: 250px; top: 105px; left: 14px; }
-.orbita-interna { width: 310px; height: 390px; top: 37px; left: 80px; border-color: rgba(255,255,255,0.16); }
-.planeta { position: absolute; top: 106px; left: 105px; width: 250px; height: 250px; overflow: hidden; border-radius: 48% 52% 47% 53%; background: #80bfa3; box-shadow: inset -27px -23px 0 rgba(10,57,45,0.14), 0 22px 45px rgba(0,0,0,0.18); transform: rotate(-10deg); }
+.orbita-externa { width: 420px; height: 250px; top: 105px; left: 14px; animation: orbitaExterna 14s ease-in-out infinite; }
+.orbita-interna { width: 310px; height: 390px; top: 37px; left: 80px; border-color: rgba(255,255,255,0.16); animation: orbitaInterna 18s ease-in-out infinite; }
+.planeta { position: absolute; top: 106px; left: 105px; width: 250px; height: 250px; overflow: hidden; border-radius: 48% 52% 47% 53%; background: #80bfa3; box-shadow: inset -27px -23px 0 rgba(10,57,45,0.14), 0 22px 45px rgba(0,0,0,0.18); transform: rotate(-10deg); animation: planetaFlutuante 6s ease-in-out infinite; }
 .continente { position: absolute; display: block; background: var(--verde-escuro); opacity: 0.9; border-radius: 40% 60% 59% 41%; }
 .continente-um { width: 120px; height: 83px; top: 38px; left: -16px; transform: rotate(27deg); }
 .continente-dois { width: 93px; height: 145px; bottom: -26px; right: 16px; transform: rotate(33deg); }
-.folha { position: absolute; top: 57px; right: 55px; font-size: 55px; color: var(--limao); transform: rotate(-41deg); }
+.folha { position: absolute; top: 57px; right: 55px; font-size: 55px; color: var(--limao); transform: rotate(-41deg); animation: folhaRespira 4s ease-in-out infinite; }
 .etiqueta-flutuante { position: absolute; z-index: 2; padding: 9px 13px; color: var(--verde-escuro); background: var(--branco); border-radius: 3px; box-shadow: 0 9px 22px rgba(0,0,0,0.12); font-size: 0.77rem; font-weight: 700; white-space: nowrap; }
-.etiqueta-energia { top: 58px; left: 273px; transform: rotate(5deg); }
-.etiqueta-ciclo { bottom: 76px; left: 16px; background: var(--limao); transform: rotate(-5deg); }
+.etiqueta-energia { top: 58px; left: 273px; transform: rotate(5deg); animation: etiquetaEnergia 5s ease-in-out infinite; }
+.etiqueta-ciclo { bottom: 76px; left: 16px; background: var(--limao); transform: rotate(-5deg); animation: etiquetaCiclo 5.5s ease-in-out infinite; }
+
+@keyframes orbitaExterna {
+  0%, 100% { transform: rotate(-24deg) translateY(0); }
+  50% { transform: rotate(-20deg) translateY(-12px); }
+}
+
+@keyframes orbitaInterna {
+  0%, 100% { transform: rotate(-24deg) translate(0, 0); }
+  50% { transform: rotate(-28deg) translate(8px, 8px); }
+}
+
+@keyframes planetaFlutuante {
+  0%, 100% { transform: rotate(-10deg) translateY(0); }
+  50% { transform: rotate(-7deg) translateY(-10px); }
+}
+
+@keyframes folhaRespira {
+  0%, 100% { transform: rotate(-41deg) scale(1); }
+  50% { transform: rotate(-34deg) scale(1.08); }
+}
+
+@keyframes etiquetaEnergia {
+  0%, 100% { transform: rotate(5deg) translateY(0); }
+  50% { transform: rotate(2deg) translateY(-8px); }
+}
+
+@keyframes etiquetaCiclo {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-2deg) translateY(7px); }
+}
 
 .faixa-principios { position: absolute; bottom: 0; display: flex; width: 100%; overflow: hidden; color: var(--verde-escuro); background: var(--limao); white-space: nowrap; }
 .faixa-principios div { padding: 16px 25px; font-size: 0.77rem; font-weight: 700; letter-spacing: 0.4px; }
 .faixa-principios span { margin-left: 45px; }
 
-.secao { padding: 128px 0; }
+.secao { padding: 128px 0; scroll-margin-top: 18px; }
+.alvo-suave { animation: alvoSuave 1.2s ease-out; }
+
+@keyframes alvoSuave {
+  0% { box-shadow: inset 0 0 0 0 rgba(216,241,95,0); }
+  35% { box-shadow: inset 0 0 0 4px rgba(216,241,95,0.3); }
+  100% { box-shadow: inset 0 0 0 0 rgba(216,241,95,0); }
+}
 .grade-duas-colunas { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; }
 .secao-introducao h2 { max-width: 400px; }
 .sobre-texto { max-width: 570px; color: var(--texto-suave); }
@@ -164,6 +203,8 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
 .titulo-central { max-width: 730px; margin: 0 auto 65px; text-align: center; }
 .titulo-central h2 { margin-bottom: 18px; }
 .titulo-central > p:last-child { color: inherit; opacity: 0.78; }
+.atuacao-midia { width: 100%; margin: -20px auto 52px; overflow: hidden; border: 1px solid rgba(216,241,95,0.28); background: var(--verde-escuro); }
+.atuacao-midia img { display: block; width: 100%; aspect-ratio: 1200 / 420; object-fit: cover; }
 .grade-atuacao { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.2); }
 .item-atuacao { display: flex; gap: 22px; min-height: 170px; padding: 34px; background: var(--verde); transition: 0.2s; }
 .item-atuacao:hover { background: #257a62; }
@@ -486,6 +527,7 @@ footer { color: #c5d5ca; background: #062a21; }
   .secao { padding: 82px 0; }
   .grade-duas-colunas, .importancia-grade { grid-template-columns: 1fr; gap: 28px; }
   .cards-conceito, .grade-atuacao, .estrategias-grid, .empresas-grid, .ods-grid { grid-template-columns: 1fr; }
+  .atuacao-midia { margin: -8px auto 38px; }
   .cards-conceito { margin-top: 46px; }
   .card-conceito { min-height: auto; }
   .card-conceito .icone-card { width: 52px; height: 52px; font-size: 2rem; }
@@ -515,5 +557,5 @@ footer { color: #c5d5ca; background: #062a21; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }

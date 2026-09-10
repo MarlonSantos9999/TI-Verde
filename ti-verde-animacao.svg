@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Tecnologia e energia sustentável</title>
+  <desc id="descricao">Servidores eficientes conectados a painéis solares por linhas de energia em movimento.</desc>
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a21"/>
+      <stop offset="0.55" stop-color="#0b392e"/>
+      <stop offset="1" stop-color="#155843"/>
+    </linearGradient>
+    <linearGradient id="painel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d8f15f" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#80bfa3" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="brilho"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect width="1200" height="420" fill="url(#fundo)"/>
+  <g opacity="0.16" fill="none" stroke="#d8f15f">
+    <path d="M0 92H1200M0 210H1200M0 328H1200"/>
+    <path d="M120 0V420M360 0V420M600 0V420M840 0V420M1080 0V420"/>
+  </g>
+  <circle cx="970" cy="86" r="78" fill="#d8f15f" opacity="0.1" filter="url(#brilho)">
+    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <g transform="translate(82 102)">
+    <rect width="300" height="218" rx="8" fill="#071f19" stroke="#80bfa3" stroke-opacity="0.5"/>
+    <rect x="22" y="24" width="256" height="48" rx="4" fill="#155843"/>
+    <rect x="22" y="85" width="256" height="48" rx="4" fill="#155843"/>
+    <rect x="22" y="146" width="256" height="48" rx="4" fill="#155843"/>
+    <g fill="#d8f15f">
+      <circle cx="45" cy="48" r="5"><animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="45" cy="109" r="5"><animate attributeName="opacity" values="0.25;1;0.25" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="45" cy="170" r="5"><animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    </g>
+    <g stroke="#b9d7aa" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <path d="M70 48H245M70 109H220M70 170H245"/>
+    </g>
+  </g>
+  <g transform="translate(740 105) rotate(-8)">
+    <rect width="270" height="160" rx="6" fill="#0b392e" stroke="#b9d7aa" stroke-opacity="0.6"/>
+    <g fill="url(#painel)" stroke="#0b392e" stroke-width="4">
+      <path d="M18 20H252L225 140H45Z"/>
+      <path d="M76 20L70 140M135 20L135 140M194 20L200 140M30 58H243M38 99H234" fill="none"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#d8f15f" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 18">
+    <path d="M390 205C510 90 625 92 748 170">
+      <animate attributeName="stroke-dashoffset" from="0" to="-120" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M390 235C520 350 640 330 750 230">
+      <animate attributeName="stroke-dashoffset" from="0" to="-120" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g transform="translate(590 188)" fill="none" stroke="#b9d7aa" stroke-width="4" stroke-linecap="round">
+    <circle r="31" stroke="#d8f15f" stroke-width="2" opacity="0.6">
+      <animate attributeName="r" values="25;42;25" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M-13 0H13M0-13V13"/>
+  </g>
+  <g transform="translate(1045 286)" stroke="#d8f15f" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M0 60V0M0 10L-23-15M0 10L23-15M0 60L-28 85M0 60L28 85"/>
+    <circle cy="-4" r="7" fill="#d8f15f"/>
+  </g>
+  <text x="82" y="370" fill="#d8f15f" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">EFICIÊNCIA • INOVAÇÃO • RESPONSABILIDADE</text>
+</svg>

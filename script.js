@@ -21,6 +21,49 @@ if (botaoMenu && menu) {
   });
 }
 
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (evento) => {
+    const destino = document.querySelector(link.getAttribute("href"));
+    if (!destino) return;
+
+    evento.preventDefault();
+
+    const inicio = window.scrollY;
+    const topo = Math.max(0, destino.getBoundingClientRect().top + inicio - 18);
+    const distancia = topo - inicio;
+    const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const atualizarHash = () => window.history.pushState(null, "", link.getAttribute("href"));
+
+    if (reduzirMovimento || Math.abs(distancia) < 4) {
+      window.scrollTo(0, topo);
+      atualizarHash();
+    } else {
+      const duracao = Math.min(1400, Math.max(800, Math.abs(distancia) * 0.65));
+      const inicioAnimacao = performance.now();
+      const rolarComCalma = (agora) => {
+        const progresso = Math.min((agora - inicioAnimacao) / duracao, 1);
+        const suavizado = progresso < 0.5
+          ? 4 * progresso ** 3
+          : 1 - ((-2 * progresso + 2) ** 3) / 2;
+
+        window.scrollTo(0, inicio + distancia * suavizado);
+
+        if (progresso < 1) {
+          requestAnimationFrame(rolarComCalma);
+        } else {
+          atualizarHash();
+        }
+      };
+
+      requestAnimationFrame(rolarComCalma);
+    }
+
+    destino.classList.remove("alvo-suave");
+    requestAnimationFrame(() => destino.classList.add("alvo-suave"));
+    window.setTimeout(() => destino.classList.remove("alvo-suave"), 1200);
+  });
+});
+
 // Mostra cada bloco suavemente quando ele aparece na tela.
 const elementosParaRevelar = document.querySelectorAll(".reveal");
 const observador = new IntersectionObserver(
@@ -90,13 +133,11 @@ async function enviarParaPlanilha(dados) {
   try {
     const resposta = await fetch(urlPlanilha, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      mode: "no-cors",
       body: JSON.stringify(dados),
     });
 
-    return resposta.ok;
+    return resposta.type === "opaque" || resposta.ok;
   } catch (error) {
     console.error("Erro ao enviar para planilha:", error);
     return false;
