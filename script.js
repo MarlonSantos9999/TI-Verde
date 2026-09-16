@@ -80,9 +80,97 @@ const observador = new IntersectionObserver(
 
 elementosParaRevelar.forEach((elemento) => observador.observe(elemento));
 
-// Formulário do questionário: salva localmente, exporta CSV e pode enviar para Google Sheets.
+const contadorLixoEletronico = document.querySelector(".circulo-dados strong[data-valor]");
+
+function animarContador(elemento) {
+  const valorFinal = Number(elemento.dataset.valor);
+  const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduzirMovimento) {
+    elemento.textContent = valorFinal;
+    return;
+  }
+
+  const inicio = performance.now();
+  const atualizarContador = (agora) => {
+    const progresso = Math.min((agora - inicio) / 1400, 1);
+    const suavizado = 1 - (1 - progresso) ** 3;
+    elemento.textContent = Math.round(valorFinal * suavizado);
+
+    if (progresso < 1) {
+      requestAnimationFrame(atualizarContador);
+    }
+  };
+
+  requestAnimationFrame(atualizarContador);
+}
+
+if (contadorLixoEletronico) {
+  const observadorContador = new IntersectionObserver(
+    (entradas, observadorAtual) => {
+      if (entradas.some((entrada) => entrada.isIntersecting)) {
+        animarContador(contadorLixoEletronico);
+        observadorAtual.disconnect();
+      }
+    },
+    { threshold: 0.6 }
+  );
+
+  observadorContador.observe(contadorLixoEletronico);
+}
+
+const modalInfo = document.querySelector("#modal-info");
+const botoesInfo = document.querySelectorAll(".ponto-interativo");
+const modalInfoTitulo = document.querySelector("#modal-info-titulo");
+const modalInfoTexto = document.querySelector("#modal-info-texto");
+const modalInfoDetalhe = document.querySelector("#modal-info-detalhe");
+const botaoFecharModal = document.querySelector(".modal-fechar");
+
+const informacoesInterativas = {
+  servidores: {
+    etiqueta: "INFRAESTRUTURA EFICIENTE",
+    titulo: "Servidores que usam menos energia",
+    texto: "Equipamentos modernos e bem dimensionados entregam o mesmo processamento com menor consumo de eletricidade.",
+    detalhe: "Boas práticas: virtualização, manutenção preventiva e monitoramento de desempenho.",
+  },
+  conexao: {
+    etiqueta: "INTEGRAÇÃO INTELIGENTE",
+    titulo: "Dados conectados a decisões melhores",
+    texto: "Monitorar o fluxo de energia e processamento ajuda a encontrar desperdícios e ajustar os recursos de acordo com a demanda.",
+    detalhe: "Otimizar software também é uma ação de sustentabilidade: menos processamento significa menos energia.",
+  },
+  solar: {
+    etiqueta: "ENERGIA RENOVÁVEL",
+    titulo: "Sol como fonte de energia limpa",
+    texto: "Painéis solares podem abastecer parte da infraestrutura digital e reduzir as emissões associadas ao consumo elétrico.",
+    detalhe: "A combinação com armazenamento e planejamento de demanda torna o uso da energia renovável mais eficiente.",
+  },
+};
+
+function abrirModalInfo(tipo) {
+  const informacao = informacoesInterativas[tipo];
+  if (!modalInfo || !informacao) return;
+
+  document.querySelector("#modal-info-etiqueta").textContent = informacao.etiqueta;
+  modalInfoTitulo.textContent = informacao.titulo;
+  modalInfoTexto.textContent = informacao.texto;
+  modalInfoDetalhe.textContent = informacao.detalhe;
+  modalInfo.showModal();
+  botaoFecharModal?.focus();
+}
+
+botoesInfo.forEach((botao) => {
+  botao.addEventListener("click", () => abrirModalInfo(botao.dataset.info));
+});
+
+botaoFecharModal?.addEventListener("click", () => modalInfo?.close());
+
+modalInfo?.addEventListener("click", (evento) => {
+  if (evento.target === modalInfo) modalInfo.close();
+});
+
+// Formulário do questionário: salva localmente e pode enviar para Google Sheets.
 const formularioQuestionario = document.getElementById("form-questionario");
-const botaoExportarCsv = document.getElementById("exportar-csv");
 const mensagemFormulario = document.getElementById("mensagem-formulario");
 const chaveLocalStorage = "ti-verde-questionario";
 const urlPlanilha = "https://script.google.com/macros/s/AKfycbypQFd88vUVaVVVvvcOnGbtHnhtuP8R9P_uJLa8PTfvXyRXrgtOucpftYbMbJic2GGx/exec";
@@ -101,28 +189,6 @@ function salvarLocalmente(dados) {
   const respostasSalvas = JSON.parse(localStorage.getItem(chaveLocalStorage) || "[]");
   respostasSalvas.push(dados);
   localStorage.setItem(chaveLocalStorage, JSON.stringify(respostasSalvas));
-}
-
-function criarCsv(dados) {
-  const cabecalho = Object.keys(dados);
-  const valores = cabecalho.map((chave) => {
-    const valor = dados[chave] ?? "";
-    return `"${String(valor).replace(/"/g, '""')}"`;
-  });
-
-  return [cabecalho.join(","), valores.join(",")].join("\n");
-}
-
-function exportarCsv(dados) {
-  const blob = new Blob([criarCsv(dados)], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "questionario-ti-verde.csv";
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
 }
 
 async function enviarParaPlanilha(dados) {
@@ -159,20 +225,13 @@ formularioQuestionario?.addEventListener("submit", async (evento) => {
 
   const dados = obterDadosFormulario();
   salvarLocalmente(dados);
-  exportarCsv(dados);
 
   const envioOk = await enviarParaPlanilha(dados);
   mostrarMensagem(
     envioOk
       ? "Respostas salvas com sucesso e enviadas para a planilha."
-      : "Respostas salvas localmente e exportadas em CSV. Para enviar para uma planilha online, configure a URL do Google Apps Script."
+      : "Respostas salvas localmente. Para enviar para uma planilha online, configure a URL do Google Apps Script."
   );
 
   formularioQuestionario.reset();
-});
-
-botaoExportarCsv?.addEventListener("click", () => {
-  const dadosAtuais = obterDadosFormulario();
-  exportarCsv(dadosAtuais);
-  mostrarMensagem("CSV gerado com as respostas atuais.");
 });

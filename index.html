@@ -127,7 +127,27 @@
 
           <div class="atuacao-midia reveal">
             <img src="ti-verde-animacao.svg" alt="Servidores eficientes conectados a energia solar" loading="lazy" />
+            <button class="ponto-interativo ponto-servidores" type="button" data-info="servidores" aria-label="Ver informações sobre servidores eficientes">
+              <span aria-hidden="true">+</span>
+            </button>
+            <button class="ponto-interativo ponto-conexao" type="button" data-info="conexao" aria-label="Ver informações sobre conexão inteligente">
+              <span aria-hidden="true">+</span>
+            </button>
+            <button class="ponto-interativo ponto-solar" type="button" data-info="solar" aria-label="Ver informações sobre energia solar">
+              <span aria-hidden="true">+</span>
+            </button>
+            <p class="atuacao-instrucao">Explore a imagem: selecione um ponto para descobrir como a tecnologia pode ser mais sustentável.</p>
           </div>
+
+          <dialog class="modal-info" id="modal-info" aria-labelledby="modal-info-titulo">
+            <div class="modal-info-conteudo">
+              <button class="modal-fechar" type="button" aria-label="Fechar informações">×</button>
+              <p class="etiqueta" id="modal-info-etiqueta">TI VERDE</p>
+              <h3 id="modal-info-titulo"></h3>
+              <p id="modal-info-texto"></p>
+              <div class="modal-detalhe" id="modal-info-detalhe"></div>
+            </div>
+          </dialog>
 
           <div class="grade-atuacao">
             <article class="item-atuacao reveal">
@@ -169,6 +189,11 @@
             <h2>Onde a tecnologia encontra<br />um grande desafio energético.</h2>
             <p>Data centers guardam, processam e distribuem os dados que usamos todos os dias.</p>
           </div>
+
+          <figure class="data-center-imagem reveal">
+            <img src="data-center-sustentavel.jpg" alt="Data center com painéis solares e turbinas eólicas em uma área verde" loading="lazy" />
+            <figcaption>Infraestrutura digital eficiente abastecida por fontes renováveis.</figcaption>
+          </figure>
 
           <div class="painel-data-centers reveal">
             <div class="dados-principais">
@@ -216,7 +241,7 @@
         <div class="container importancia-grade">
           <div class="importancia-visual reveal">
             <div class="circulo-dados">
-              <strong>62</strong>
+              <strong data-valor="62">0</strong>
               <span>milhões de<br />toneladas</span>
             </div>
             <p>de lixo eletrônico foram geradas no mundo em 2022.</p>
@@ -378,62 +403,6 @@
         </div>
       </section>
 
-      <section class="secao referencias" id="referencias">
-        <div class="container">
-          <div class="titulo-central reveal">
-            <p class="etiqueta">FONTES PARA SE APROFUNDAR</p>
-            <h2>Referências confiáveis</h2>
-            <p>As informações do site foram baseadas em instituições públicas e internacionais.</p>
-          </div>
-          <div class="lista-referencias reveal">
-            <a href="https://sdgs.un.org/goals/goal9" target="_blank" rel="noreferrer">
-              <span>01</span>
-              <div><strong>Objetivo de Desenvolvimento Sustentável 9</strong><small>ONU — metas para infraestrutura, industrialização sustentável e inovação.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noreferrer">
-              <span>02</span>
-              <div><strong>Energy and AI</strong><small>IEA — dados e projeções sobre consumo energético de data centers.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.datacenters.google/operating-sustainably/" target="_blank" rel="noreferrer">
-              <span>03</span>
-              <div><strong>Google Data Centers — Operating sustainably</strong><small>Google — eficiência, PUE e meta de energia livre de carbono 24/7.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://datacenters.microsoft.com/sustainability/" target="_blank" rel="noreferrer">
-              <span>04</span>
-              <div><strong>Microsoft Datacenter Sustainability</strong><small>Microsoft — metas de carbono, água, resíduos e energia renovável.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2025.pdf" target="_blank" rel="noreferrer">
-              <span>05</span>
-              <div><strong>Apple Environmental Progress Report</strong><small>Apple — energia renovável em data centers e circularidade de produtos.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.delltechnologies.com/asset/en-sg/solutions/business-solutions/briefs-summaries/design-for-environment.pdf" target="_blank" rel="noreferrer">
-              <span>06</span>
-              <div><strong>Dell Technologies and the Circular Economy</strong><small>Dell Technologies — projeto modular, reparo, reuso e reciclagem.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank" rel="noreferrer">
-              <span>07</span>
-              <div><strong>Global E-waste Monitor 2024</strong><small>ITU e UNITAR — dados mundiais sobre resíduos eletrônicos.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/" target="_blank" rel="noreferrer">
-              <span>08</span>
-              <div><strong>Logística reversa de eletroeletrônicos</strong><small>SINIR — orientações oficiais para o descarte no Brasil.</small></div>
-              <b>↗</b>
-            </a>
-            <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noreferrer">
-              <span>09</span>
-              <div><strong>Política Nacional de Resíduos Sólidos</strong><small>Lei nº 12.305/2010 — logística reversa e responsabilidade compartilhada.</small></div>
-              <b>↗</b>
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
 
     <section class="secao questionario" id="questionario">
@@ -555,107 +524,71 @@
               </div>
             </article>
 
-            <article class="pergunta-card">
-              <h3>11. Data centers consomem energia elétrica para funcionar?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p11" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p11" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p11" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>12. Você acha que resfriamento e eficiência impactam o consumo de energia?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p12" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p12" value="Talvez" /> Talvez</label>
-                <label><input type="radio" name="p12" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p12" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>13. Você já ouviu falar em energia renovável?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p13" value="Sim, muito" required /> Sim, muito</label>
-                <label><input type="radio" name="p13" value="Sim, um pouco" /> Sim, um pouco</label>
-                <label><input type="radio" name="p13" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>14. Qual dessas práticas você considera mais sustentável?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p14" value="Reduzir uso de energia" required /> Reduzir uso de energia</label>
-                <label><input type="radio" name="p14" value="Reutilizar equipamentos" /> Reutilizar equipamentos</label>
-                <label><input type="radio" name="p14" value="Reciclar itens eletrônicos" /> Reciclar itens eletrônicos</label>
-                <label><input type="radio" name="p14" value="Não sei" /> Não sei</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>15. Você acha que empresas precisam reduzir waste eletrônico?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p15" value="Sim, totalmente" required /> Sim, totalmente</label>
-                <label><input type="radio" name="p15" value="Em parte" /> Em parte</label>
-                <label><input type="radio" name="p15" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p15" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>16. Você sabe o que é logística reversa?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p16" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p16" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p16" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>17. Você considera importante o uso de equipamentos mais eficientes?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p17" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p17" value="Talvez" /> Talvez</label>
-                <label><input type="radio" name="p17" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>18. Você já buscou informações sobre o tema em notícias ou redes sociais?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p18" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p18" value="Poucas vezes" /> Poucas vezes</label>
-                <label><input type="radio" name="p18" value="Nunca" /> Nunca</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>19. A população deve aprender mais sobre tecnologia sustentável?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p19" value="Sim, com certeza" required /> Sim, com certeza</label>
-                <label><input type="radio" name="p19" value="Talvez" /> Talvez</label>
-                <label><input type="radio" name="p19" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>20. Você se sente preparado para adotar ações mais sustentáveis no uso da tecnologia?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p20" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p20" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p20" value="Não" /> Não</label>
-              </div>
-            </article>
           </div>
 
           <div class="acoes-formulario">
             <button type="submit" class="botao botao-principal">Salvar respostas</button>
-            <button type="button" class="botao botao-secundario botao-form" id="exportar-csv">Exportar CSV</button>
           </div>
 
           <p id="mensagem-formulario" class="mensagem-formulario" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+
+    <section class="secao referencias" id="referencias">
+      <div class="container">
+        <div class="titulo-central reveal">
+          <p class="etiqueta">FONTES PARA SE APROFUNDAR</p>
+          <h2>Referências confiáveis</h2>
+          <p>As informações do site foram baseadas em instituições públicas e internacionais.</p>
+        </div>
+        <div class="lista-referencias reveal">
+          <a href="https://sdgs.un.org/goals/goal9" target="_blank" rel="noreferrer">
+            <span>01</span>
+            <div><strong>Objetivo de Desenvolvimento Sustentável 9</strong><small>ONU — metas para infraestrutura, industrialização sustentável e inovação.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noreferrer">
+            <span>02</span>
+            <div><strong>Energy and AI</strong><small>IEA — dados e projeções sobre consumo energético de data centers.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.datacenters.google/operating-sustainably/" target="_blank" rel="noreferrer">
+            <span>03</span>
+            <div><strong>Google Data Centers — Operating sustainably</strong><small>Google — eficiência, PUE e meta de energia livre de carbono 24/7.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://datacenters.microsoft.com/sustainability/" target="_blank" rel="noreferrer">
+            <span>04</span>
+            <div><strong>Microsoft Datacenter Sustainability</strong><small>Microsoft — metas de carbono, água, resíduos e energia renovável.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2025.pdf" target="_blank" rel="noreferrer">
+            <span>05</span>
+            <div><strong>Apple Environmental Progress Report</strong><small>Apple — energia renovável em data centers e circularidade de produtos.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.delltechnologies.com/asset/en-sg/solutions/business-solutions/briefs-summaries/design-for-environment.pdf" target="_blank" rel="noreferrer">
+            <span>06</span>
+            <div><strong>Dell Technologies and the Circular Economy</strong><small>Dell Technologies — projeto modular, reparo, reuso e reciclagem.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank" rel="noreferrer">
+            <span>07</span>
+            <div><strong>Global E-waste Monitor 2024</strong><small>ITU e UNITAR — dados mundiais sobre resíduos eletrônicos.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/" target="_blank" rel="noreferrer">
+            <span>08</span>
+            <div><strong>Logística reversa de eletroeletrônicos</strong><small>SINIR — orientações oficiais para o descarte no Brasil.</small></div>
+            <b>↗</b>
+          </a>
+          <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noreferrer">
+            <span>09</span>
+            <div><strong>Política Nacional de Resíduos Sólidos</strong><small>Lei nº 12.305/2010 — logística reversa e responsabilidade compartilhada.</small></div>
+            <b>↗</b>
+          </a>
+        </div>
       </div>
     </section>
 
