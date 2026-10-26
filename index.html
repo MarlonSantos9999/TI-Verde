@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Entenda o que é TI Verde, sua atuação na tecnologia e sua importância para o meio ambiente."
+      content="Uma introdução interativa à TI Verde, com práticas para uma tecnologia mais eficiente e sustentável."
     />
-    <title>TI Verde | Tecnologia que cuida do planeta</title>
+    <title>Home | TI Verde</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,9 +19,9 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="cabecalho">
+    <header class="cabecalho cabecalho-claro">
       <div class="container navegacao">
-        <a class="logo" href="#inicio" aria-label="TI Verde - página inicial">
+        <a class="logo" href="index.html" aria-label="TI Verde - página inicial">
           <span class="logo-icone" aria-hidden="true">⌁</span>
           <span>TI<span>Verde</span></span>
         </a>
@@ -31,41 +31,61 @@
         </button>
 
         <nav class="menu" aria-label="Navegação principal">
-          <a href="#sobre">Conceito</a>
-          <a href="#data-centers">Data Centers</a>
-          <a href="#empresas">Empresas</a>
-          <a href="#ods9">ODS 9</a>
-          <a class="menu-destaque" href="#referencias">Referências</a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a class="menu-destaque" href="conteudo.html">Explorar conteúdo</a>
         </nav>
       </div>
     </header>
 
     <main id="conteudo">
-      <section class="hero" id="inicio">
+      <section class="hero home-hero" id="inicio">
         <div class="container hero-conteudo">
           <div class="hero-texto">
-            <p class="etiqueta">TECNOLOGIA COM PROPÓSITO</p>
-            <h1>Inovar também é <em>cuidar</em> do planeta.</h1>
+            <p class="hero-selo"><span aria-hidden="true">✦</span> TECNOLOGIA COM PROPÓSITO</p>
+            <h1>Tecnologia que evolui <em>sem deixar o planeta para trás.</em></h1>
             <p class="hero-descricao">
-              A TI Verde mostra que computadores, sistemas e serviços digitais podem ser
+              Descubra como a TI Verde torna computadores, serviços digitais e data centers
               mais eficientes, responsáveis e sustentáveis.
             </p>
             <div class="hero-botoes">
-              <a class="botao botao-principal" href="#sobre">Conheça a TI Verde <span>↓</span></a>
-              <a class="botao botao-secundario" href="#acoes">Ver atitudes práticas</a>
+              <a class="botao botao-principal" href="conteudo.html">Explorar a TI Verde <span>→</span></a>
+              <a class="botao botao-secundario" href="#sobre">Por que isso importa?</a>
             </div>
+            <p class="hero-nota"><span aria-hidden="true">●</span> Inovação, eficiência e cuidado em equilíbrio</p>
           </div>
 
-          <div class="hero-ilustracao" aria-hidden="true">
-            <div class="orbita orbita-externa"></div>
-            <div class="orbita orbita-interna"></div>
-            <div class="planeta">
-              <span class="continente continente-um"></span>
-              <span class="continente continente-dois"></span>
-              <span class="folha folha-um">◒</span>
+          <div class="hero-ilustracao" role="group" aria-label="Destaques sobre TI Verde">
+            <div class="hero-planeta" aria-hidden="true">
+              <div class="orbita orbita-externa"></div>
+              <div class="orbita orbita-interna"></div>
+              <div class="planeta">
+                <span class="continente continente-um"></span>
+                <span class="continente continente-dois"></span>
+                <span class="folha folha-um">◒</span>
+              </div>
             </div>
-            <div class="etiqueta-flutuante etiqueta-energia">⚡ Menos energia</div>
-            <div class="etiqueta-flutuante etiqueta-ciclo">↻ Economia circular</div>
+            <a class="hero-bolha hero-bolha-ti" href="conteudo.html#sobre" aria-label="Saiba mais sobre o conceito de TI Verde">
+              <span class="hero-bolha-icone" aria-hidden="true">✦</span>
+              <strong>TI Verde</strong>
+              <span>tecnologia responsável</span>
+            </a>
+            <a class="hero-bolha hero-bolha-data" href="conteudo.html#data-centers" aria-label="Saiba mais sobre data centers sustentáveis">
+              <span class="hero-bolha-icone" aria-hidden="true">⚡</span>
+              <strong>Data centers</strong>
+              <span>energia com eficiência</span>
+            </a>
+            <a class="hero-bolha hero-bolha-circular" href="conteudo.html#acoes" aria-label="Veja atitudes sustentáveis para o dia a dia">
+              <span class="hero-bolha-icone" aria-hidden="true">
+                <svg viewBox="0 0 40 40" focusable="false">
+                  <path d="M29.8 11.8a14 14 0 0 0-22 3.3M6.7 10.7l.7 5.5 5.4-1.1M10.2 28.2a14 14 0 0 0 22-3.3m1.1 4.4-.7-5.5-5.4 1.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path d="M20.4 27.7c-5.4-.1-8.4-3.2-8.3-8.5 5.5-.1 8.7 2.7 8.3 8.5Zm0 0c.2-5.4 3.2-8.4 8.5-8.3.1 5.5-2.7 8.7-8.5 8.3Z" fill="#d8f15f" stroke="#0b392e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                  <path d="M20.4 27.8v3.1" fill="none" stroke="#0b392e" stroke-linecap="round" stroke-width="1.6" />
+                </svg>
+              </span>
+              <strong>Economia circular</strong>
+              <span>reparo, reuso e reciclagem</span>
+            </a>
           </div>
         </div>
         <div class="faixa-principios" aria-label="Princípios da TI Verde">
@@ -76,525 +96,60 @@
         </div>
       </section>
 
-      <section class="secao sobre" id="sobre">
-        <div class="container grade-duas-colunas">
-          <div class="secao-introducao reveal">
-            <p class="etiqueta">01 — O CONCEITO</p>
-            <h2>O que é <em>TI Verde?</em></h2>
-          </div>
-          <div class="sobre-texto reveal">
-            <p class="texto-grande">
-              TI Verde, ou Tecnologia da Informação Verde, reúne práticas que diminuem os
-              impactos ambientais da tecnologia.
-            </p>
+      <section class="secao home-sobre" id="sobre">
+        <div class="container">
+          <div class="home-introducao reveal">
+            <p class="etiqueta">UMA ESCOLHA MAIS CONSCIENTE</p>
+            <h2>Tecnologia que funciona melhor para as pessoas <em>e para o planeta.</em></h2>
             <p>
-              Ela considera todo o ciclo de vida de um produto: da escolha de materiais e
-              fabricação até o uso, a reutilização e o descarte. Não se trata de abandonar a
-              tecnologia, mas de utilizá-la de maneira mais inteligente.
+              TI Verde é pensar em como projetamos, usamos e descartamos a tecnologia.
+              Pequenas e grandes decisões podem economizar energia, preservar recursos e
+              prolongar a vida dos equipamentos.
             </p>
-          </div>
-        </div>
-
-        <div class="container cards-conceito">
-          <article class="card-conceito reveal">
-            <span class="numero">01</span>
-            <div class="icone-card">◌</div>
-            <h3>Reduzir</h3>
-            <p>Evitar desperdícios de energia, materiais e equipamentos.</p>
-          </article>
-          <article class="card-conceito reveal">
-            <span class="numero">02</span>
-            <div class="icone-card">↻</div>
-            <h3>Reutilizar</h3>
-            <p>Ampliar a vida útil dos dispositivos com manutenção e reparo.</p>
-          </article>
-          <article class="card-conceito reveal">
-            <span class="numero">03</span>
-            <div class="icone-card">⌘</div>
-            <h3>Reciclar</h3>
-            <p>Encaminhar resíduos eletrônicos a pontos de coleta adequados.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="secao atuacao" id="atuacao">
-        <div class="container">
-          <div class="titulo-central reveal">
-            <p class="etiqueta">02 — NA PRÁTICA</p>
-            <h2>Como a TI Verde atua<br />na área da tecnologia?</h2>
-            <p>Pequenas escolhas técnicas podem gerar impactos positivos em grande escala.</p>
+            <a class="botao botao-principal" href="conteudo.html#sobre">Entenda o conceito <span>→</span></a>
           </div>
 
-          <div class="atuacao-midia reveal">
-            <img src="ti-verde-animacao.svg" alt="Servidores eficientes conectados a energia solar" loading="lazy" />
-            <button class="ponto-interativo ponto-servidores" type="button" data-info="servidores" aria-label="Ver informações sobre servidores eficientes">
-              <span aria-hidden="true">+</span>
-            </button>
-            <button class="ponto-interativo ponto-conexao" type="button" data-info="conexao" aria-label="Ver informações sobre conexão inteligente">
-              <span aria-hidden="true">+</span>
-            </button>
-            <button class="ponto-interativo ponto-solar" type="button" data-info="solar" aria-label="Ver informações sobre energia solar">
-              <span aria-hidden="true">+</span>
-            </button>
-            <p class="atuacao-instrucao">Explore a imagem: selecione um ponto para descobrir como a tecnologia pode ser mais sustentável.</p>
+          <div class="home-temas" aria-label="Explore os temas de TI Verde">
+            <a class="home-tema home-tema-conceito reveal" href="conteudo.html#sobre">
+              <span class="home-tema-numero">01</span>
+              <span class="home-tema-icone" aria-hidden="true">✦</span>
+              <strong>TI Verde</strong>
+              <span>O conceito e por que ele importa.</span>
+            </a>
+            <a class="home-tema home-tema-dados reveal" href="conteudo.html#data-centers">
+              <span class="home-tema-numero">02</span>
+              <span class="home-tema-icone" aria-hidden="true">⚡</span>
+              <strong>Data centers</strong>
+              <span>Eficiência para a infraestrutura digital.</span>
+            </a>
+            <a class="home-tema home-tema-acoes reveal" href="conteudo.html#acoes">
+              <span class="home-tema-numero">03</span>
+              <span class="home-tema-icone" aria-hidden="true">
+                <svg viewBox="0 0 40 40" focusable="false">
+                  <path d="M7 10.5h26v17H7zM4.5 31h31" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" />
+                  <path d="M22 24c-5-.1-7.8-3-7.7-7.9 5.1-.1 8.1 2.5 7.7 7.9Zm0 0c.2-5 3-7.8 7.9-7.7.1 5.1-2.5 8.1-7.9 7.7Z" fill="#d8f15f" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+                  <path d="M22 24v3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+                </svg>
+              </span>
+              <strong>Atitudes práticas</strong>
+              <span>Ideias para fazer parte da mudança.</span>
+            </a>
           </div>
 
-          <dialog class="modal-info" id="modal-info" aria-labelledby="modal-info-titulo">
-            <div class="modal-info-conteudo">
-              <button class="modal-fechar" type="button" aria-label="Fechar informações">×</button>
-              <p class="etiqueta" id="modal-info-etiqueta">TI VERDE</p>
-              <h3 id="modal-info-titulo"></h3>
-              <p id="modal-info-texto"></p>
-              <div class="modal-detalhe" id="modal-info-detalhe"></div>
-            </div>
-          </dialog>
-
-          <div class="grade-atuacao">
-            <article class="item-atuacao reveal">
-              <span class="item-icone">⚡</span>
-              <div>
-                <h3>Eficiência energética</h3>
-                <p>Equipamentos e programas que realizam mais usando menos eletricidade.</p>
-              </div>
-            </article>
-            <article class="item-atuacao reveal">
-              <span class="item-icone">☁</span>
-              <div>
-                <h3>Data centers responsáveis</h3>
-                <p>Servidores com melhor resfriamento, monitoramento e fontes renováveis.</p>
-              </div>
-            </article>
-            <article class="item-atuacao reveal">
-              <span class="item-icone">⌘</span>
-              <div>
-                <h3>Software otimizado</h3>
-                <p>Código eficiente consome menos processamento, dados e bateria.</p>
-              </div>
-            </article>
-            <article class="item-atuacao reveal">
-              <span class="item-icone">↺</span>
-              <div>
-                <h3>Economia circular</h3>
-                <p>Reparo, recondicionamento e reciclagem evitam o descarte prematuro.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="secao data-centers" id="data-centers">
-        <div class="container">
-          <div class="titulo-central reveal">
-            <p class="etiqueta">03 — DATA CENTERS E ENERGIA</p>
-            <h2>Onde a tecnologia encontra<br />um grande desafio energético.</h2>
-            <p>Data centers guardam, processam e distribuem os dados que usamos todos os dias.</p>
-          </div>
-
-          <figure class="data-center-imagem reveal">
-            <img src="data-center-sustentavel.jpg" alt="Data center com painéis solares e turbinas eólicas em uma área verde" loading="lazy" />
-            <figcaption>Infraestrutura digital eficiente abastecida por fontes renováveis.</figcaption>
-          </figure>
-
-          <div class="painel-data-centers reveal">
-            <div class="dados-principais">
-              <div>
-                <strong>415 <small>TWh</small></strong>
-                <p>de eletricidade consumida por data centers no mundo em 2024.</p>
-              </div>
-              <div>
-                <strong>~945 <small>TWh</small></strong>
-                <p>é a projeção para 2030 no cenário-base da IEA.</p>
-              </div>
-            </div>
-            <p class="nota-fonte">
-              Isso equivale a sair de cerca de 1,5% para quase 3% do consumo global de eletricidade.
-              <a href="#referencias">Fonte: IEA, 2025.</a>
-            </p>
-          </div>
-
-          <div class="estrategias-grid">
-            <article class="estrategia reveal">
-              <span>01</span>
-              <h3>Medir a eficiência</h3>
-              <p>O indicador PUE mostra quanta energia extra é usada além dos equipamentos de TI. Quanto mais próximo de 1, melhor.</p>
-            </article>
-            <article class="estrategia reveal">
-              <span>02</span>
-              <h3>Resfriar com inteligência</h3>
-              <p>Projeto térmico adequado, equipamentos modernos e uso responsável da água reduzem a energia necessária para refrigerar servidores.</p>
-            </article>
-            <article class="estrategia reveal">
-              <span>03</span>
-              <h3>Usar energia de baixo carbono</h3>
-              <p>Fontes renováveis, armazenamento e contratos de energia limpa ajudam a reduzir as emissões associadas ao consumo elétrico.</p>
-            </article>
-            <article class="estrategia reveal">
-              <span>04</span>
-              <h3>Otimizar software e servidores</h3>
-              <p>Virtualização, melhor aproveitamento dos servidores e tarefas flexíveis em horários mais limpos evitam desperdício de processamento.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="secao importancia" id="importancia">
-        <div class="container importancia-grade">
-          <div class="importancia-visual reveal">
-            <div class="circulo-dados">
-              <strong data-valor="62">0</strong>
-              <span>milhões de<br />toneladas</span>
-            </div>
-            <p>de lixo eletrônico foram geradas no mundo em 2022.</p>
-            <small>Fonte: ITU e UNITAR, 2024</small>
-          </div>
-          <div class="importancia-texto reveal">
-            <p class="etiqueta">03 — POR QUE IMPORTA</p>
-            <h2>O digital também deixa uma <em>pegada.</em></h2>
-            <p>
-              O uso da tecnologia depende de eletricidade, matérias-primas e equipamentos
-              físicos. Quando descartados incorretamente, eletrônicos podem liberar substâncias
-              nocivas e desperdiçar materiais valiosos.
-            </p>
-            <p>
-              A TI Verde ajuda a transformar esse cenário: reduz custos, preserva recursos e
-              incentiva uma inovação que considera as pessoas e o meio ambiente.
-            </p>
-            <a class="link-seta" href="#referencias">Conferir as fontes utilizadas <span>→</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="secao acoes" id="acoes">
-        <div class="container grade-duas-colunas">
-          <div class="secao-introducao reveal">
-            <p class="etiqueta">04 — SUA PARTE</p>
-            <h2>Atitudes que fazem diferença.</h2>
-          </div>
-          <div class="lista-acoes reveal">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Use por mais tempo</h3>
-                <p>Cuide, atualize e repare seus dispositivos antes de trocá-los.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Economize energia</h3>
-                <p>Desligue equipamentos ociosos e ative configurações de economia.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>Descarte corretamente</h3>
-                <p>Nunca misture eletrônicos ao lixo comum; procure um ponto de coleta.</p>
-              </div>
-            </article>
-            <article>
-              <span>04</span>
-              <div>
-                <h3>Compre com consciência</h3>
-                <p>Priorize aparelhos duráveis, eficientes e de marcas com logística reversa.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="secao empresas" id="empresas">
-        <div class="container">
-          <div class="titulo-central reveal">
-            <p class="etiqueta">05 — QUEM JÁ APLICA</p>
-            <h2>Quatro exemplos de<br />TI Verde em ação.</h2>
-            <p>São práticas divulgadas pelas próprias empresas e acompanhadas em suas fontes oficiais.</p>
-          </div>
-
-          <div class="empresas-grid">
-            <article class="empresa-card reveal">
-              <div class="empresa-topo">
-                <img class="empresa-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Logo do Google" />
-                <span>GOOGLE</span>
-              </div>
-              <h3>Energia livre de carbono e eficiência operacional</h3>
-              <p>Seus data centers tiveram PUE médio de 1,09 em 2025, e a empresa mantém a meta de operar com energia livre de carbono 24 horas por dia até 2030.</p>
-              <a href="https://www.datacenters.google/operating-sustainably/" target="_blank" rel="noreferrer">Ver fonte oficial <span>↗</span></a>
-            </article>
-            <article class="empresa-card reveal">
-              <div class="empresa-topo">
-                <img class="empresa-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Logo da Microsoft" />
-                <span>MICROSOFT</span>
-              </div>
-              <h3>Data centers com metas ambientais integradas</h3>
-              <p>A empresa trabalha para ser carbono negativo, positiva em água e gerar zero resíduos até 2030, combinando eficiência, energia renovável e circularidade.</p>
-              <a href="https://datacenters.microsoft.com/sustainability/" target="_blank" rel="noreferrer">Ver fonte oficial <span>↗</span></a>
-            </article>
-            <article class="empresa-card reveal">
-              <div class="empresa-topo">
-                <img class="empresa-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Logo da Apple" />
-                <span>APPLE</span>
-              </div>
-              <h3>Energia renovável e design para durar</h3>
-              <p>As instalações corporativas, lojas e data centers da Apple usam eletricidade renovável; a empresa também prioriza materiais reciclados, reparo e recuperação de componentes.</p>
-              <a href="https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2025.pdf" target="_blank" rel="noreferrer">Ver relatório oficial <span>↗</span></a>
-            </article>
-            <article class="empresa-card reveal">
-              <div class="empresa-topo">
-                <img class="empresa-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg" alt="Logo da Dell" />
-                <span>DELL TECHNOLOGIES</span>
-              </div>
-              <h3>Economia circular nos equipamentos</h3>
-              <p>A Dell descreve projetos modulares e pensados para reparo, reuso e reciclagem — uma forma de manter produtos e materiais em uso por mais tempo.</p>
-              <a href="https://www.delltechnologies.com/asset/en-sg/solutions/business-solutions/briefs-summaries/design-for-environment.pdf" target="_blank" rel="noreferrer">Ver fonte oficial <span>↗</span></a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="secao ods" id="ods9">
-        <div class="container">
-          <div class="ods-cabecalho reveal">
-            <div class="selo-ods" aria-label="Objetivo de Desenvolvimento Sustentável 9">ODS<br /><strong>9</strong></div>
+          <div class="home-convite reveal">
             <div>
-              <p class="etiqueta">06 — INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA</p>
-              <h2>Como a TI Verde colabora<br />com o <em>ODS 9?</em></h2>
+              <p class="etiqueta">QUER SABER MAIS?</p>
+              <h2>Explore o conteúdo completo sobre TI Verde.</h2>
             </div>
+            <a class="botao botao-principal" href="conteudo.html">Ir para o conteúdo <span>→</span></a>
           </div>
-          <p class="ods-explicacao reveal">
-            O ODS 9 busca construir infraestrutura resiliente, promover industrialização sustentável e fomentar inovação. A TI Verde ajuda a transformar a infraestrutura digital em uma solução mais eficiente e responsável.
-          </p>
-
-          <div class="ods-grid">
-            <article class="ods-item reveal">
-              <span>9.1</span>
-              <h3>Infraestrutura sustentável e resiliente</h3>
-              <p>Data centers eficientes, bem planejados e com energia mais limpa tornam os serviços digitais mais confiáveis e diminuem impactos ambientais locais.</p>
-            </article>
-            <article class="ods-item reveal">
-              <span>9.4</span>
-              <h3>Uso eficiente de recursos e tecnologias limpas</h3>
-              <p>Economia circular, equipamentos eficientes, energia renovável e redução de resíduos modernizam a infraestrutura de forma ambientalmente mais correta.</p>
-            </article>
-            <article class="ods-item reveal">
-              <span>9.5</span>
-              <h3>Pesquisa, capacidade tecnológica e inovação</h3>
-              <p>Novos sistemas de resfriamento, software otimizado e materiais reciclados incentivam pesquisa e soluções tecnológicas para os desafios ambientais.</p>
-            </article>
-          </div>
-          <p class="ods-rodape reveal">Relação baseada nas metas 9.1, 9.4 e 9.5 da ONU. <a href="https://sdgs.un.org/goals/goal9" target="_blank" rel="noreferrer">Conhecer o ODS 9 <span>↗</span></a></p>
         </div>
       </section>
-
-      <section class="chamada-descarte">
-        <div class="container chamada-conteudo reveal">
-          <div>
-            <p class="etiqueta">DESCARTE CORRETO NO BRASIL</p>
-            <h2>Seu eletrônico pode ter um novo destino.</h2>
-          </div>
-          <a
-            class="botao botao-claro"
-            href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Saiba mais no SINIR <span>↗</span>
-          </a>
-        </div>
-      </section>
-
     </main>
-
-    <section class="secao questionario" id="questionario">
-      <div class="container">
-        <div class="titulo-central reveal">
-          <p class="etiqueta">07 — QUESTIONÁRIO</p>
-          <h2>Conhecimento sobre TI Verde e data centers sustentáveis</h2>
-          <p>Responda de forma rápida e simples para avaliar o nível de conhecimento da população.</p>
-        </div>
-
-        <form id="form-questionario" class="formulario reveal" novalidate>
-          <div class="dados-pessoais">
-            <label>
-              Nome completo
-              <input type="text" name="nome" placeholder="Digite seu nome" required />
-            </label>
-            <label>
-              Idade
-              <input type="number" name="idade" min="10" max="120" placeholder="Ex.: 28" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="seuemail@email.com" required />
-            </label>
-          </div>
-
-          <div class="perguntas-grid">
-            <article class="pergunta-card">
-              <h3>1. Você já ouviu falar em TI Verde?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p1" value="Sim, muito" required /> Sim, muito</label>
-                <label><input type="radio" name="p1" value="Sim, um pouco" /> Sim, um pouco</label>
-                <label><input type="radio" name="p1" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p1" value="Não ouvi falar" /> Não ouvi falar</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>2. Você sabe o que significa TI Verde?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p2" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p2" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p2" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>3. A tecnologia pode causar impactos ambientais?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p3" value="Sim, bastante" required /> Sim, bastante</label>
-                <label><input type="radio" name="p3" value="Sim, um pouco" /> Sim, um pouco</label>
-                <label><input type="radio" name="p3" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p3" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>4. Você conhece o conceito de sustentabilidade digital?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p4" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p4" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p4" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>5. O descarte correto de eletrônicos é importante?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p5" value="Sim, muito" required /> Sim, muito</label>
-                <label><input type="radio" name="p5" value="Sim, um pouco" /> Sim, um pouco</label>
-                <label><input type="radio" name="p5" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p5" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>6. Você já reutilizou ou reformou algum eletrônico?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p6" value="Sim, muitas vezes" required /> Sim, muitas vezes</label>
-                <label><input type="radio" name="p6" value="Sim, algumas vezes" /> Sim, algumas vezes</label>
-                <label><input type="radio" name="p6" value="Nunca" /> Nunca</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>7. Você sabe o que é reciclagem de resíduos eletrônicos?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p7" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p7" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p7" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>8. Você acredita que a eficiência energética reduz custos?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p8" value="Sim, com certeza" required /> Sim, com certeza</label>
-                <label><input type="radio" name="p8" value="Talvez" /> Talvez</label>
-                <label><input type="radio" name="p8" value="Não sei" /> Não sei</label>
-                <label><input type="radio" name="p8" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>9. Já pensou na energia consumida pelos dados e servidores?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p9" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p9" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p9" value="Não" /> Não</label>
-              </div>
-            </article>
-
-            <article class="pergunta-card">
-              <h3>10. Você sabe o que é um data center?</h3>
-              <div class="opcoes">
-                <label><input type="radio" name="p10" value="Sim" required /> Sim</label>
-                <label><input type="radio" name="p10" value="Mais ou menos" /> Mais ou menos</label>
-                <label><input type="radio" name="p10" value="Não" /> Não</label>
-              </div>
-            </article>
-
-          </div>
-
-          <div class="acoes-formulario">
-            <button type="submit" class="botao botao-principal">Salvar respostas</button>
-          </div>
-
-          <p id="mensagem-formulario" class="mensagem-formulario" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section class="secao referencias" id="referencias">
-      <div class="container">
-        <div class="titulo-central reveal">
-          <p class="etiqueta">FONTES PARA SE APROFUNDAR</p>
-          <h2>Referências confiáveis</h2>
-          <p>As informações do site foram baseadas em instituições públicas e internacionais.</p>
-        </div>
-        <div class="lista-referencias reveal">
-          <a href="https://sdgs.un.org/goals/goal9" target="_blank" rel="noreferrer">
-            <span>01</span>
-            <div><strong>Objetivo de Desenvolvimento Sustentável 9</strong><small>ONU — metas para infraestrutura, industrialização sustentável e inovação.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noreferrer">
-            <span>02</span>
-            <div><strong>Energy and AI</strong><small>IEA — dados e projeções sobre consumo energético de data centers.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.datacenters.google/operating-sustainably/" target="_blank" rel="noreferrer">
-            <span>03</span>
-            <div><strong>Google Data Centers — Operating sustainably</strong><small>Google — eficiência, PUE e meta de energia livre de carbono 24/7.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://datacenters.microsoft.com/sustainability/" target="_blank" rel="noreferrer">
-            <span>04</span>
-            <div><strong>Microsoft Datacenter Sustainability</strong><small>Microsoft — metas de carbono, água, resíduos e energia renovável.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2025.pdf" target="_blank" rel="noreferrer">
-            <span>05</span>
-            <div><strong>Apple Environmental Progress Report</strong><small>Apple — energia renovável em data centers e circularidade de produtos.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.delltechnologies.com/asset/en-sg/solutions/business-solutions/briefs-summaries/design-for-environment.pdf" target="_blank" rel="noreferrer">
-            <span>06</span>
-            <div><strong>Dell Technologies and the Circular Economy</strong><small>Dell Technologies — projeto modular, reparo, reuso e reciclagem.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank" rel="noreferrer">
-            <span>07</span>
-            <div><strong>Global E-waste Monitor 2024</strong><small>ITU e UNITAR — dados mundiais sobre resíduos eletrônicos.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/" target="_blank" rel="noreferrer">
-            <span>08</span>
-            <div><strong>Logística reversa de eletroeletrônicos</strong><small>SINIR — orientações oficiais para o descarte no Brasil.</small></div>
-            <b>↗</b>
-          </a>
-          <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noreferrer">
-            <span>09</span>
-            <div><strong>Política Nacional de Resíduos Sólidos</strong><small>Lei nº 12.305/2010 — logística reversa e responsabilidade compartilhada.</small></div>
-            <b>↗</b>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <footer>
       <div class="container rodape-conteudo">
-        <a class="logo" href="#inicio"><span class="logo-icone" aria-hidden="true">⌁</span><span>TI<span>Verde</span></span></a>
+        <a class="logo" href="index.html"><span class="logo-icone" aria-hidden="true">⌁</span><span>TI<span>Verde</span></span></a>
         <p>Aprender, inovar e preservar. <span>© <span id="ano"></span></span></p>
       </div>
     </footer>
