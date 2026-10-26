@@ -19,7 +19,7 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="cabecalho">
+    <header class="cabecalho cabecalho-claro">
       <div class="container navegacao">
         <a class="logo" href="index.html" aria-label="TI Verde - página inicial">
           <span class="logo-icone" aria-hidden="true">⌁</span>
@@ -59,7 +59,7 @@
           <div class="sobre-texto reveal">
             <p class="texto-grande">
               TI Verde, ou Tecnologia da Informação Verde, reúne práticas que diminuem os
-              impactos ambientais da tecnologia.
+              <span>impactos ambientais da tecnologia.</span>
             </p>
             <p>
               Ela considera todo o ciclo de vida de um produto: da escolha de materiais e
@@ -181,8 +181,8 @@
             <button class="ponto-interativo ponto-solar" type="button" data-info="solar" aria-label="Ver informações sobre energia solar">
               <span aria-hidden="true">+</span>
             </button>
-            <p class="atuacao-instrucao">Explore a imagem: selecione um ponto para descobrir como a tecnologia pode ser mais sustentável.</p>
           </div>
+          <p class="atuacao-instrucao">Toque em um ponto da imagem para explorar práticas de TI Verde.</p>
 
           <dialog class="modal-info" id="modal-info" aria-labelledby="modal-info-titulo">
             <div class="modal-info-conteudo">
@@ -196,28 +196,44 @@
 
           <div class="grade-atuacao">
             <article class="item-atuacao reveal">
-              <span class="item-icone">⚡</span>
+              <span class="item-icone" aria-hidden="true">
+                <svg class="icone-energia" viewBox="0 0 40 40" focusable="false">
+                  <path d="M23 4 9 23h10l-1 13 14-20H21l2-12Z" />
+                </svg>
+              </span>
               <div>
                 <h3>Eficiência energética</h3>
                 <p>Equipamentos e programas que realizam mais usando menos eletricidade.</p>
               </div>
             </article>
             <article class="item-atuacao reveal">
-              <span class="item-icone">☁</span>
+              <span class="item-icone" aria-hidden="true">
+                <svg class="icone-nuvem" viewBox="0 0 40 40" focusable="false">
+                  <path d="M12 30h18a7 7 0 0 0 .5-14A11 11 0 0 0 10 18a6 6 0 0 0 2 12Z" />
+                </svg>
+              </span>
               <div>
                 <h3>Data centers responsáveis</h3>
                 <p>Servidores com melhor resfriamento, monitoramento e fontes renováveis.</p>
               </div>
             </article>
             <article class="item-atuacao reveal">
-              <span class="item-icone">⌘</span>
+              <span class="item-icone" aria-hidden="true">
+                <svg viewBox="0 0 40 40" focusable="false">
+                  <path d="m15 13-7 7 7 7m10-14 7 7-7 7m-3-18-4 22" />
+                </svg>
+              </span>
               <div>
                 <h3>Software otimizado</h3>
                 <p>Código eficiente consome menos processamento, dados e bateria.</p>
               </div>
             </article>
             <article class="item-atuacao reveal">
-              <span class="item-icone">↺</span>
+              <span class="item-icone" aria-hidden="true">
+                <svg viewBox="0 0 40 40" focusable="false">
+                  <path d="M31 16a12 12 0 0 0-20-4l-3 4m0-7v7h7M9 24a12 12 0 0 0 20 4l3-4m0 7v-7h-7" />
+                </svg>
+              </span>
               <div>
                 <h3>Economia circular</h3>
                 <p>Reparo, recondicionamento e reciclagem evitam o descarte prematuro.</p>
@@ -450,7 +466,7 @@
         </div>
       </section>
 
-      <section class="chamada-descarte">
+      <section class="chamada-descarte" id="descarte-correto">
         <div class="container chamada-conteudo reveal">
           <div class="chamada-descarte-texto">
             <p class="etiqueta">DESCARTE CORRETO NO BRASIL</p>
@@ -539,10 +555,43 @@
       </div>
     </section>
 
-    <footer>
-      <div class="container rodape-conteudo">
-        <a class="logo" href="index.html"><span class="logo-icone" aria-hidden="true">⌁</span><span>TI<span>Verde</span></span></a>
-        <p>Aprender, inovar e preservar. <span>© <span id="ano"></span></span></p>
+    <footer class="rodape">
+      <div class="container">
+        <div class="rodape-grade">
+          <div class="rodape-marca">
+            <a class="logo" href="index.html" aria-label="TI Verde - página inicial"><span class="logo-icone" aria-hidden="true">⌁</span><span>TI<span>Verde</span></span></a>
+            <p>Um espaço para descobrir como a tecnologia pode evoluir com mais eficiência, responsabilidade e cuidado com o planeta.</p>
+            <a class="rodape-cta" href="#sobre">Explorar conteúdo <span aria-hidden="true">→</span></a>
+          </div>
+
+          <nav class="rodape-coluna" aria-label="Navegação institucional">
+            <h2>INSTITUCIONAL</h2>
+            <a href="index.html#inicio">Início</a>
+            <a href="index.html#sobre">Por que TI Verde?</a>
+            <a href="#referencias">Referências</a>
+          </nav>
+
+          <nav class="rodape-coluna" aria-label="Temas de TI Verde">
+            <h2>TI VERDE</h2>
+            <a href="#sobre">O conceito</a>
+            <a href="#atuacao">Na prática</a>
+            <a href="#data-centers">Data centers</a>
+            <a href="#acoes">Atitudes práticas</a>
+          </nav>
+
+          <nav class="rodape-coluna" aria-label="Impactos e referências">
+            <h2>IMPACTO E REFERÊNCIAS</h2>
+            <a href="#descarte-correto">Descarte responsável</a>
+            <a href="#empresas">Empresas</a>
+            <a href="#ods9">ODS 9</a>
+            <a href="#referencias">Fontes confiáveis</a>
+          </nav>
+        </div>
+
+        <div class="rodape-base">
+          <p>Aprender, inovar e preservar.</p>
+          <p>© <span id="ano"></span> TI Verde</p>
+        </div>
       </div>
     </footer>
 
