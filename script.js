@@ -1,6 +1,68 @@
 // Atualiza o ano do rodapé automaticamente.
 document.querySelector("#ano").textContent = new Date().getFullYear();
 
+const videoDataCenter = document.querySelector(".data-center-video");
+
+if (videoDataCenter) {
+  let inicioPendente = false;
+  let jaIniciou = false;
+  let videoVisivel = false;
+
+  const iniciarVideoDataCenter = () => {
+    if (document.hidden || !videoDataCenter.paused || inicioPendente) return;
+
+    videoDataCenter.defaultMuted = true;
+    videoDataCenter.muted = true;
+    videoDataCenter.volume = 0;
+    inicioPendente = true;
+
+    videoDataCenter.play()
+      .then(() => {
+        jaIniciou = true;
+      })
+      .catch((erro) => {
+        if (erro.name !== "NotAllowedError") {
+          console.error("Não foi possível iniciar o vídeo dos data centers.", erro);
+        }
+      })
+      .finally(() => {
+        inicioPendente = false;
+      });
+  };
+
+  videoDataCenter.addEventListener("volumechange", () => {
+    if (!videoDataCenter.muted || videoDataCenter.volume > 0) {
+      videoDataCenter.muted = true;
+      videoDataCenter.volume = 0;
+    }
+  });
+  videoDataCenter.addEventListener("loadedmetadata", iniciarVideoDataCenter);
+  videoDataCenter.addEventListener("canplay", iniciarVideoDataCenter);
+  videoDataCenter.addEventListener("pause", () => {
+    inicioPendente = false;
+    if (jaIniciou && videoVisivel && !document.hidden) {
+      window.setTimeout(iniciarVideoDataCenter, 150);
+    }
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) iniciarVideoDataCenter();
+  });
+  window.addEventListener("pageshow", iniciarVideoDataCenter);
+  document.addEventListener("pointerdown", iniciarVideoDataCenter, { passive: true });
+
+  if ("IntersectionObserver" in window) {
+    const observadorVideo = new IntersectionObserver(([entrada]) => {
+      videoVisivel = entrada.isIntersecting;
+      if (videoVisivel) iniciarVideoDataCenter();
+    }, { threshold: 0.1 });
+    observadorVideo.observe(videoDataCenter);
+  } else {
+    videoVisivel = true;
+  }
+
+  iniciarVideoDataCenter();
+}
+
 // Abre e fecha o menu em telas pequenas.
 const botaoMenu = document.querySelector(".menu-botao");
 const menu = document.querySelector(".menu");
