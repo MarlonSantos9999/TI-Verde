@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entenda o consumo de energia dos data centers, seus impactos e caminhos para uma infraestrutura digital mais eficiente."
+    />
+    <title>Data Centers e Energia | TI Verde</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261106-4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho cabecalho-claro">
+      <div class="container navegacao">
+        <a class="logo" href="index.html" aria-label="TI Verde - página inicial">
+          <span class="logo-icone" aria-hidden="true">⌁</span>
+          <span>TI<span>Verde</span></span>
+        </a>
+
+        <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="index.html">Home</a>
+          <a href="conteudo.html">TI Verde</a>
+          <a href="#data-centers" aria-current="page">Data Centers</a>
+          <a class="menu-destaque" href="#referencias">Referências</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="pagina-titulo">
+        <div class="container">
+          <p class="etiqueta">INFRAESTRUTURA DIGITAL</p>
+          <h1>Data Centers e <em>Energia.</em></h1>
+          <p>Conheça o impacto energético dos serviços digitais e as escolhas que podem tornar essa infraestrutura mais eficiente.</p>
+        </div>
+      </section>
+
+      <section class="secao data-centers" id="data-centers">
+        <div class="container">
+          <div class="titulo-central reveal">
+            <p class="etiqueta">03 — DATA CENTERS E ENERGIA</p>
+            <h2>O mundo digital também<br />precisa de <em>energia real.</em></h2>
+            <p>
+              Cada vídeo, arquivo e serviço online depende de máquinas físicas que armazenam
+              e processam dados — e precisam de eletricidade e refrigeração para funcionar.
+            </p>
+          </div>
+
+          <figure class="data-center-imagem reveal">
+            <video class="data-center-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="data%20centers.jpg" aria-label="Vídeo de data centers em reprodução contínua">
+              <source src="data%20centers.mp4" type="video/mp4" />
+              Seu navegador não oferece suporte à reprodução de vídeo.
+            </video>
+            <span class="imagem-etiqueta">A INFRAESTRUTURA POR TRÁS DO DIGITAL</span>
+            <figcaption>Servidores armazenam e processam os dados usados em serviços digitais todos os dias.</figcaption>
+          </figure>
+
+          <div class="painel-data-centers reveal">
+            <div class="painel-introducao">
+              <span class="painel-ponto" aria-hidden="true"></span>
+              <p>ENERGIA EM ESCALA GLOBAL</p>
+            </div>
+            <div class="painel-resumo">
+              <h3>Quanta eletricidade os data centers usam?</h3>
+              <p>Um terawatt-hora (TWh) equivale a 1 bilhão de quilowatts-hora (kWh).</p>
+            </div>
+            <div class="dados-principais">
+              <article class="dado-card dado-atual">
+                <span class="dado-ano">ESTIMATIVA ANUAL • 2024</span>
+                <p class="dado-valor">415 <small>TWh</small></p>
+                <p>415 bilhões de kWh — cerca de <strong>1,5% da eletricidade usada no mundo</strong> naquele ano.</p>
+                <div class="barra-energia" role="img" aria-label="415 terawatt-horas, cerca de 44 por cento da projeção para 2030">
+                  <span style="--barra-energia: 44%"></span>
+                </div>
+                <span class="barra-legenda">44% do valor projetado para 2030</span>
+              </article>
+              <article class="dado-card dado-projecao">
+                <span class="dado-ano">CENÁRIO-BASE IEA • 2030</span>
+                <p class="dado-valor">945 <small>TWh</small></p>
+                <p>Quase <strong>3% da eletricidade global</strong> — um pouco mais do que o consumo anual do Japão usado como referência pela IEA.</p>
+                <div class="barra-energia" role="img" aria-label="945 terawatt-horas, a projeção de referência para 2030">
+                  <span style="--barra-energia: 100%"></span>
+                </div>
+                <span class="barra-legenda">Referência de comparação • 2030</span>
+              </article>
+            </div>
+            <div class="nota-fonte">
+              <p>Na comparação da IEA, o consumo anual projetado para 2030 é cerca de <strong>2,3 vezes</strong> a estimativa de 2024. É uma projeção, não um resultado garantido; os números são para todos os data centers, não apenas os que usam IA.</p>
+              <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noreferrer">Fonte: IEA, <em>Energy and AI</em> (2025) <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="estrategias-cabecalho reveal">
+            <p class="etiqueta">QUATRO CAMINHOS PARA UM DATA CENTER MAIS EFICIENTE</p>
+            <h3>Como reduzir o impacto?</h3>
+          </div>
+
+          <div class="estrategias-grid">
+            <article class="estrategia reveal">
+              <span>01</span>
+              <span class="estrategia-visual estrategia-visual-medicao" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>📊</span>
+              </span>
+              <h3>Medir a eficiência</h3>
+              <p>O indicador PUE mostra quanta energia extra é usada além dos equipamentos de TI. Quanto mais próximo de 1, melhor.</p>
+            </article>
+            <article class="estrategia reveal">
+              <span>02</span>
+              <span class="estrategia-visual estrategia-visual-resfriamento" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>❄️</span>
+              </span>
+              <h3>Resfriar com inteligência</h3>
+              <p>Projeto térmico adequado, equipamentos modernos e uso responsável da água reduzem a energia necessária para refrigerar servidores.</p>
+            </article>
+            <article class="estrategia reveal">
+              <span>03</span>
+              <span class="estrategia-visual estrategia-visual-energia" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>🌱</span>
+              </span>
+              <h3>Usar energia de baixo carbono</h3>
+              <p>Fontes renováveis, armazenamento e contratos de energia limpa ajudam a reduzir as emissões associadas ao consumo elétrico.</p>
+            </article>
+            <article class="estrategia reveal">
+              <span>04</span>
+              <span class="estrategia-visual estrategia-visual-software" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>💻</span>
+              </span>
+              <h3>Otimizar software e servidores</h3>
+              <p>Virtualização, melhor aproveitamento dos servidores e tarefas flexíveis em horários mais limpos evitam desperdício de processamento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pesquisa-convite" aria-labelledby="pesquisa-titulo">
+        <div class="container pesquisa-conteudo">
+          <div>
+            <p class="etiqueta">SUA OPINIÃO É IMPORTANTE</p>
+            <h2 id="pesquisa-titulo">Ajude-nos a entender um pouco mais sobre seu conhecimento.</h2>
+            <p>Conte para nós o que você já sabe sobre TI Verde e os temas apresentados no site. Sua participação ajuda a melhorar este projeto.</p>
+          </div>
+          <a class="botao botao-principal" href="https://forms.gle/o7jZVjQMnS35L8kFA" target="_blank" rel="noopener noreferrer">
+            Responder ao formulário <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="secao referencias" id="referencias">
+        <div class="container">
+          <div class="titulo-central reveal">
+            <p class="etiqueta">FONTES PARA SE APROFUNDAR</p>
+            <h2>Referências confiáveis</h2>
+            <p>Fontes institucionais e especializadas usadas para organizar o conteúdo do site.</p>
+          </div>
+          <div class="lista-referencias reveal">
+            <a href="https://sdgs.un.org/goals/goal9" target="_blank" rel="noreferrer">
+              <span>01</span>
+              <div><strong>Objetivo de Desenvolvimento Sustentável 9</strong><small>ONU — metas para infraestrutura, industrialização sustentável e inovação.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noreferrer">
+              <span>02</span>
+              <div><strong>Energy and AI</strong><small>IEA — dados e projeções sobre consumo energético de data centers.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.datacenters.google/operating-sustainably/" target="_blank" rel="noreferrer">
+              <span>03</span>
+              <div><strong>Google Data Centers — Operating sustainably</strong><small>Google — eficiência, PUE e meta de energia livre de carbono 24/7.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://datacenters.microsoft.com/sustainability/" target="_blank" rel="noreferrer">
+              <span>04</span>
+              <div><strong>Microsoft Datacenter Sustainability</strong><small>Microsoft — metas de carbono, água, resíduos e energia renovável.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2025.pdf" target="_blank" rel="noreferrer">
+              <span>05</span>
+              <div><strong>Apple Environmental Progress Report</strong><small>Apple — energia renovável em data centers e circularidade de produtos.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.delltechnologies.com/asset/en-sg/solutions/business-solutions/briefs-summaries/design-for-environment.pdf" target="_blank" rel="noreferrer">
+              <span>06</span>
+              <div><strong>Dell Technologies and the Circular Economy</strong><small>Dell Technologies — projeto modular, reparo, reuso e reciclagem.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank" rel="noreferrer">
+              <span>07</span>
+              <div><strong>Global E-waste Monitor 2024</strong><small>ITU e UNITAR — dados mundiais sobre resíduos eletrônicos.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/" target="_blank" rel="noreferrer">
+              <span>08</span>
+              <div><strong>Logística reversa de eletroeletrônicos</strong><small>SINIR — orientações oficiais para o descarte no Brasil.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noreferrer">
+              <span>09</span>
+              <div><strong>Política Nacional de Resíduos Sólidos</strong><small>Lei nº 12.305/2010 — logística reversa e responsabilidade compartilhada.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://safetec.com.br/dicas/ti-verde/" target="_blank" rel="noreferrer">
+              <span>10</span>
+              <div><strong>TI Verde: o que é, níveis, vantagens e exemplos práticos</strong><small>SafeTec — conceitos, níveis de adoção e práticas de TI Verde.</small></div>
+              <b>↗</b>
+            </a>
+            <a href="https://www.ibm.com/br-pt/think/topics/green-computing" target="_blank" rel="noreferrer">
+              <span>11</span>
+              <div><strong>Computação verde</strong><small>IBM Think — desafios de adoção, ciclo de vida dos equipamentos e prioridades na TI.</small></div>
+              <b>↗</b>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <div class="rodape-grade">
+          <div class="rodape-marca">
+            <a class="logo" href="index.html" aria-label="TI Verde - página inicial"><span class="logo-icone" aria-hidden="true">⌁</span><span>TI<span>Verde</span></span></a>
+            <p>Um espaço para descobrir como a tecnologia pode evoluir com mais eficiência, responsabilidade e cuidado com o planeta.</p>
+            <a class="rodape-cta" href="conteudo.html">Explorar conteúdo <span aria-hidden="true">→</span></a>
+          </div>
+
+          <nav class="rodape-coluna" aria-label="Navegação institucional">
+            <h2>INSTITUCIONAL</h2>
+            <a href="index.html#inicio">Início</a>
+            <a href="conteudo.html#sobre">O conceito</a>
+            <a href="#referencias">Referências</a>
+          </nav>
+
+          <nav class="rodape-coluna" aria-label="Temas de TI Verde">
+            <h2>TI VERDE</h2>
+            <a href="conteudo.html#atuacao">Na prática</a>
+            <a href="#data-centers">Data centers</a>
+            <a href="conteudo.html#desafios">Desafios</a>
+            <a href="conteudo.html#acoes">Atitudes práticas</a>
+          </nav>
+
+          <nav class="rodape-coluna" aria-label="Impactos">
+            <h2>IMPACTO</h2>
+            <a href="conteudo.html#importancia">Por que importa</a>
+            <a href="conteudo.html#empresas">Empresas</a>
+            <a href="conteudo.html#ods9">ODS 9</a>
+            <a href="conteudo.html#descarte-correto">Descarte responsável</a>
+          </nav>
+        </div>
+
+        <div class="rodape-base">
+          <p>Aprender, inovar e preservar.</p>
+          <p>© <span id="ano"></span> TI Verde</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -640,6 +640,11 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
 .ods-item p { margin: 0; color: var(--texto-suave); font-size: 0.88rem; }
 .ods-rodape { margin: 27px 0 0; color: var(--texto-suave); font-size: 0.78rem; }
 .ods-rodape a { margin-left: 7px; color: var(--verde-escuro); border-bottom: 1px solid var(--verde); font-weight: 700; }
+.ods-proximo { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 40px; padding: 25px 28px; border: 1px solid rgba(28,110,87,0.16); border-radius: 14px; background: rgba(255,255,255,0.72); box-shadow: 0 10px 24px rgba(11,57,46,0.05); }
+.ods-proximo strong { display: block; margin-bottom: 5px; color: var(--verde-escuro); font-size: 1rem; }
+.ods-proximo p { max-width: 600px; margin: 0; color: var(--texto-suave); font-size: 0.88rem; }
+.ods-proximo .botao { flex: 0 0 auto; border-radius: 999px; background: var(--verde-escuro); color: var(--branco); }
+.ods-proximo .botao:hover { background: var(--verde); }
 
 .chamada-descarte { color: var(--branco); background: var(--verde-escuro); }
 .chamada-conteudo { display: flex; align-items: center; justify-content: space-between; gap: 60px; min-height: 260px; }
@@ -803,6 +808,8 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
   .selo-ods strong { font-size: 2.2rem; }
   .ods-explicacao { margin: 32px 0 40px; font-size: 1rem; }
   .ods-item { min-height: auto; }
+  .ods-proximo { align-items: stretch; flex-direction: column; gap: 17px; margin-top: 30px; padding: 22px; }
+  .ods-proximo .botao { width: 100%; justify-content: space-between; }
   .chamada-conteudo { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 46px 0; }
   .chamada-descarte-texto { padding: 0 0 27px; }
   .lista-referencias a { grid-template-columns: 30px 1fr 17px; gap: 8px; }
