@@ -623,20 +623,23 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
 .empresas-grid .empresa-card:nth-child(3) { transition-delay: 160ms; }
 .empresas-grid .empresa-card:nth-child(4) { transition-delay: 240ms; }
 
-.ods { color: var(--branco); background: #155843; }
-.ods .etiqueta { color: var(--limao); }
+.ods { position: relative; overflow: hidden; color: var(--verde-escuro); background: linear-gradient(145deg, #f3f8ef 0%, #e5efe1 100%); }
+.ods::before { position: absolute; top: -220px; right: -120px; width: 520px; height: 520px; border: 1px solid rgba(28,110,87,0.12); border-radius: 50%; box-shadow: 0 0 0 38px rgba(28,110,87,0.025), 0 0 0 82px rgba(28,110,87,0.02); content: ""; pointer-events: none; }
+.ods > .container { position: relative; z-index: 1; }
+.ods .etiqueta { color: var(--verde); font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; }
 .ods-cabecalho { display: flex; align-items: center; gap: 30px; }
-.selo-ods { display: grid; width: 114px; height: 114px; flex: 0 0 114px; place-content: center; color: var(--verde-escuro); background: var(--limao); font-size: 0.65rem; font-weight: 700; line-height: 1.2; text-align: center; }
-.selo-ods strong { display: block; font-family: var(--serif); font-size: 3.3rem; line-height: 0.9; }
-.ods-cabecalho h2 { margin: 0; }
-.ods-explicacao { max-width: 760px; margin: 44px 0 53px 144px; color: #d7e4dc; font-size: 1.14rem; }
+.selo-ods { display: grid; width: 114px; height: 114px; flex: 0 0 114px; place-content: center; color: var(--branco); border-radius: 18px; background: var(--verde-escuro); box-shadow: 0 12px 26px rgba(11,57,46,0.16); font-size: 0.65rem; font-weight: 700; line-height: 1.2; text-align: center; }
+.selo-ods strong { display: block; color: var(--limao); font-family: var(--sans); font-size: 3.5rem; line-height: 0.95; }
+.ods-cabecalho h2 { max-width: 780px; margin: 10px 0 0; color: var(--verde-escuro); font-family: var(--sans); font-size: clamp(2.5rem, 4.8vw, 4.1rem); font-weight: 700; letter-spacing: -2.7px; line-height: 1.04; }
+.ods-cabecalho h2 em { color: var(--verde); font-style: normal; }
+.ods-explicacao { max-width: 760px; margin: 38px 0 48px 144px; color: var(--texto-suave); font-size: 1.08rem; }
 .ods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.ods-item { min-height: 255px; padding: 27px; background: rgba(255,255,255,0.08); border-top: 2px solid var(--limao); }
-.ods-item > span { color: var(--limao); font-size: 0.85rem; font-weight: 700; }
-.ods-item h3 { margin: 23px 0 10px; font-family: var(--serif); font-size: 1.32rem; font-weight: 600; }
-.ods-item p { margin: 0; color: #d7e4dc; font-size: 0.88rem; }
-.ods-rodape { margin: 27px 0 0; color: #c1d5ca; font-size: 0.78rem; }
-.ods-rodape a { margin-left: 7px; color: var(--limao); border-bottom: 1px solid var(--limao); font-weight: 700; }
+.ods-item { min-height: 255px; padding: 27px; border: 1px solid #dce9d9; border-top: 3px solid var(--verde); border-radius: 14px; background: rgba(255,255,255,0.88); box-shadow: 0 10px 24px rgba(11,57,46,0.06); }
+.ods-item > span { color: var(--verde); font-size: 0.85rem; font-weight: 700; }
+.ods-item h3 { margin: 23px 0 10px; color: var(--verde-escuro); font-family: var(--sans); font-size: 1.2rem; font-weight: 700; line-height: 1.35; }
+.ods-item p { margin: 0; color: var(--texto-suave); font-size: 0.88rem; }
+.ods-rodape { margin: 27px 0 0; color: var(--texto-suave); font-size: 0.78rem; }
+.ods-rodape a { margin-left: 7px; color: var(--verde-escuro); border-bottom: 1px solid var(--verde); font-weight: 700; }
 
 .chamada-descarte { color: var(--branco); background: var(--verde-escuro); }
 .chamada-conteudo { display: flex; align-items: center; justify-content: space-between; gap: 60px; min-height: 260px; }
@@ -795,7 +798,8 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
   .desafio-card { min-height: auto; padding: 23px; }
   .desafios-nota { padding: 21px; }
   .ods-cabecalho { align-items: flex-start; gap: 18px; }
-  .selo-ods { width: 72px; height: 72px; flex-basis: 72px; }
+  .ods-cabecalho h2 { font-size: clamp(2rem, 8vw, 3rem); letter-spacing: -1.5px; }
+  .selo-ods { width: 72px; height: 72px; flex-basis: 72px; border-radius: 13px; font-size: 0.55rem; }
   .selo-ods strong { font-size: 2.2rem; }
   .ods-explicacao { margin: 32px 0 40px; font-size: 1rem; }
   .ods-item { min-height: auto; }
