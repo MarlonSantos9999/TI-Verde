@@ -14,6 +14,7 @@ if (videoDataCenter) {
     videoDataCenter.defaultMuted = true;
     videoDataCenter.muted = true;
     videoDataCenter.volume = 0;
+    videoDataCenter.loop = true;
     inicioPendente = true;
 
     videoDataCenter.play()
@@ -38,6 +39,10 @@ if (videoDataCenter) {
   });
   videoDataCenter.addEventListener("loadedmetadata", iniciarVideoDataCenter);
   videoDataCenter.addEventListener("canplay", iniciarVideoDataCenter);
+  videoDataCenter.addEventListener("ended", () => {
+    videoDataCenter.currentTime = 0;
+    iniciarVideoDataCenter();
+  });
   videoDataCenter.addEventListener("pause", () => {
     inicioPendente = false;
     if (jaIniciou && videoVisivel && !document.hidden) {
@@ -83,12 +88,46 @@ if (botaoMenu && menu) {
   });
 }
 
+const titulosDasSecoes = {
+  inicio: "Início",
+  sobre: "O conceito de TI Verde",
+  atuacao: "TI Verde na prática",
+  "data-centers": "Data Centers e Energia",
+  importancia: "Por que a TI Verde importa",
+  acoes: "Atitudes práticas",
+  empresas: "TI Verde nas empresas",
+  ods9: "TI Verde e ODS 9",
+  "descarte-correto": "Descarte responsável",
+  referencias: "Referências",
+};
+
+function atualizarTituloDaSecao(id) {
+  const secao = document.getElementById(id);
+  if (!secao) return;
+
+  const titulo = titulosDasSecoes[id]
+    || secao.querySelector("h1, h2, h3")?.textContent.replace(/\s+/g, " ").trim();
+
+  if (titulo) document.title = `${titulo} | TI Verde`;
+}
+
+function atualizarTituloPeloHash() {
+  if (window.location.hash) {
+    atualizarTituloDaSecao(decodeURIComponent(window.location.hash.slice(1)));
+  }
+}
+
+atualizarTituloPeloHash();
+window.addEventListener("hashchange", atualizarTituloPeloHash);
+window.addEventListener("popstate", atualizarTituloPeloHash);
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (evento) => {
     const destino = document.querySelector(link.getAttribute("href"));
     if (!destino) return;
 
     evento.preventDefault();
+    atualizarTituloDaSecao(destino.id);
 
     const inicio = window.scrollY;
     const topo = Math.max(0, destino.getBoundingClientRect().top + inicio - 18);
