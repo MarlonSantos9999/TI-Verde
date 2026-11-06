@@ -94,6 +94,7 @@ const titulosDasSecoes = {
   atuacao: "TI Verde na prática",
   "data-centers": "Data Centers e Energia",
   importancia: "Por que a TI Verde importa",
+  desafios: "Desafios da computação verde",
   acoes: "Atitudes práticas",
   empresas: "TI Verde nas empresas",
   ods9: "TI Verde e ODS 9",

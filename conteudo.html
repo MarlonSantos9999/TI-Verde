@@ -34,6 +34,7 @@
           <a href="index.html">Home</a>
           <a href="#sobre">Conceito</a>
           <a href="#data-centers">Data Centers</a>
+          <a href="#desafios">Desafios</a>
           <a href="#empresas">Empresas</a>
           <a href="#ods9">ODS 9</a>
           <a class="menu-destaque" href="#referencias">Referências</a>
@@ -266,24 +267,36 @@
           <div class="painel-data-centers reveal">
             <div class="painel-introducao">
               <span class="painel-ponto" aria-hidden="true"></span>
-              <p>DEMANDA GLOBAL DE ELETRICIDADE</p>
+              <p>ENERGIA EM ESCALA GLOBAL</p>
+            </div>
+            <div class="painel-resumo">
+              <h3>Quanta eletricidade os data centers usam?</h3>
+              <p>Um terawatt-hora (TWh) equivale a 1 bilhão de quilowatts-hora (kWh).</p>
             </div>
             <div class="dados-principais">
-              <div>
-                <span class="dado-ano">2024</span>
-                <strong>415 <small>TWh</small></strong>
-                <p>de eletricidade consumida por data centers no mundo em 2024.</p>
-              </div>
-              <div>
-                <span class="dado-ano">PROJEÇÃO • 2030</span>
-                <strong>~945 <small>TWh</small></strong>
-                <p>é a projeção para 2030 no cenário-base da IEA.</p>
-              </div>
+              <article class="dado-card dado-atual">
+                <span class="dado-ano">ESTIMATIVA ANUAL • 2024</span>
+                <p class="dado-valor">415 <small>TWh</small></p>
+                <p>415 bilhões de kWh — cerca de <strong>1,5% da eletricidade usada no mundo</strong> naquele ano.</p>
+                <div class="barra-energia" role="img" aria-label="415 terawatt-horas, cerca de 44 por cento da projeção para 2030">
+                  <span style="--barra-energia: 44%"></span>
+                </div>
+                <span class="barra-legenda">44% do valor projetado para 2030</span>
+              </article>
+              <article class="dado-card dado-projecao">
+                <span class="dado-ano">CENÁRIO-BASE IEA • 2030</span>
+                <p class="dado-valor">945 <small>TWh</small></p>
+                <p>Quase <strong>3% da eletricidade global</strong> — um pouco mais do que o consumo anual do Japão usado como referência pela IEA.</p>
+                <div class="barra-energia" role="img" aria-label="945 terawatt-horas, a projeção de referência para 2030">
+                  <span style="--barra-energia: 100%"></span>
+                </div>
+                <span class="barra-legenda">Referência de comparação • 2030</span>
+              </article>
             </div>
-            <p class="nota-fonte">
-              Isso equivale a sair de cerca de 1,5% para quase 3% do consumo global de eletricidade.
-              <a href="#referencias">Fonte: IEA, 2025.</a>
-            </p>
+            <div class="nota-fonte">
+              <p>Na comparação da IEA, o consumo anual projetado para 2030 é cerca de <strong>2,3 vezes</strong> a estimativa de 2024. É uma projeção, não um resultado garantido; os números são para todos os data centers, não apenas os que usam IA.</p>
+              <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noreferrer">Fonte: IEA, <em>Energy and AI</em> (2025) <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
 
           <div class="estrategias-cabecalho reveal">
@@ -294,21 +307,37 @@
           <div class="estrategias-grid">
             <article class="estrategia reveal">
               <span>01</span>
+              <span class="estrategia-visual estrategia-visual-medicao" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>📊</span>
+              </span>
               <h3>Medir a eficiência</h3>
               <p>O indicador PUE mostra quanta energia extra é usada além dos equipamentos de TI. Quanto mais próximo de 1, melhor.</p>
             </article>
             <article class="estrategia reveal">
               <span>02</span>
+              <span class="estrategia-visual estrategia-visual-resfriamento" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>❄️</span>
+              </span>
               <h3>Resfriar com inteligência</h3>
               <p>Projeto térmico adequado, equipamentos modernos e uso responsável da água reduzem a energia necessária para refrigerar servidores.</p>
             </article>
             <article class="estrategia reveal">
               <span>03</span>
+              <span class="estrategia-visual estrategia-visual-energia" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>🌱</span>
+              </span>
               <h3>Usar energia de baixo carbono</h3>
               <p>Fontes renováveis, armazenamento e contratos de energia limpa ajudam a reduzir as emissões associadas ao consumo elétrico.</p>
             </article>
             <article class="estrategia reveal">
               <span>04</span>
+              <span class="estrategia-visual estrategia-visual-software" aria-hidden="true">
+                <img src="data%20centers.jpg" alt="" loading="lazy" />
+                <span>💻</span>
+              </span>
               <h3>Otimizar software e servidores</h3>
               <p>Virtualização, melhor aproveitamento dos servidores e tarefas flexíveis em horários mais limpos evitam desperdício de processamento.</p>
             </article>
@@ -327,7 +356,7 @@
             <small>Fonte: ITU e UNITAR, 2024</small>
           </div>
           <div class="importancia-texto reveal">
-            <p class="etiqueta">03 — POR QUE IMPORTA</p>
+            <p class="etiqueta">04 — POR QUE IMPORTA</p>
             <h2>O digital também deixa uma <em>pegada.</em></h2>
             <p>
               O uso da tecnologia depende de eletricidade, matérias-primas e equipamentos
@@ -343,10 +372,49 @@
         </div>
       </section>
 
+      <section class="secao desafios" id="desafios">
+        <div class="container">
+          <div class="titulo-central reveal">
+            <p class="etiqueta">05 — BARREIRAS E CAMINHOS</p>
+            <h2>O que dificulta uma TI mais <em>verde?</em></h2>
+            <p>Adotar práticas sustentáveis envolve equilibrar impactos ambientais com custos, desempenho, segurança e necessidades diferentes.</p>
+          </div>
+
+          <div class="desafios-grid">
+            <article class="desafio-card reveal">
+              <span class="desafio-icone" aria-hidden="true">🔎</span>
+              <h3>O impacto passa despercebido</h3>
+              <p>Como os efeitos da tecnologia nem sempre são visíveis, a sustentabilidade pode ficar em segundo plano diante de metas de velocidade, capacidade e desempenho.</p>
+            </article>
+            <article class="desafio-card reveal">
+              <span class="desafio-icone" aria-hidden="true">🔄</span>
+              <h3>Inovação e vida útil</h3>
+              <p>A rápida evolução dos equipamentos incentiva trocas frequentes. Projetar produtos duráveis, reparáveis e alinhados a critérios ambientais a cada geração é um desafio.</p>
+            </article>
+            <article class="desafio-card reveal">
+              <span class="desafio-icone" aria-hidden="true">💰</span>
+              <h3>Investimento inicial</h3>
+              <p>Modernizar escritórios, fábricas e data centers para usar menos energia ou recursos pode exigir um investimento elevado antes que os benefícios apareçam.</p>
+            </article>
+            <article class="desafio-card reveal">
+              <span class="desafio-icone" aria-hidden="true">⚖️</span>
+              <h3>Necessidades em conflito</h3>
+              <p>Dados incompletos e prioridades distintas dificultam decisões: uma organização pode priorizar segurança e disponibilidade, enquanto uma pessoa busca custo, portabilidade ou desempenho.</p>
+            </article>
+          </div>
+
+          <div class="desafios-nota reveal">
+            <strong>O caminho é equilibrar e medir.</strong>
+            <p>Não existe uma solução única para todos. Avaliar o ciclo de vida, definir prioridades e acompanhar resultados ajuda a incorporar melhorias ambientais sem ignorar as necessidades de cada uso.</p>
+            <a href="https://www.ibm.com/br-pt/think/topics/green-computing" target="_blank" rel="noreferrer">Fonte: IBM — Computação verde <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
       <section class="secao acoes" id="acoes">
         <div class="container grade-duas-colunas">
           <div class="secao-introducao reveal">
-            <p class="etiqueta">04 — SUA PARTE</p>
+            <p class="etiqueta">06 — SUA PARTE</p>
             <h2>Atitudes que fazem diferença.</h2>
           </div>
           <div class="lista-acoes reveal">
@@ -385,7 +453,7 @@
       <section class="secao empresas" id="empresas">
         <div class="container">
           <div class="titulo-central reveal">
-            <p class="etiqueta">05 — QUEM JÁ APLICA</p>
+            <p class="etiqueta">07 — QUEM JÁ APLICA</p>
             <h2>Ideias sustentáveis<br />em ação.</h2>
             <p>Conheça práticas divulgadas pelas próprias empresas e explore suas fontes oficiais.</p>
           </div>
@@ -440,7 +508,7 @@
           <div class="ods-cabecalho reveal">
             <div class="selo-ods" aria-label="Objetivo de Desenvolvimento Sustentável 9">ODS<br /><strong>9</strong></div>
             <div>
-              <p class="etiqueta">06 — INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA</p>
+              <p class="etiqueta">08 — INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA</p>
               <h2>Como a TI Verde colabora<br />com o <em>ODS 9?</em></h2>
             </div>
           </div>
@@ -554,6 +622,11 @@
             <div><strong>TI Verde: o que é, níveis, vantagens e exemplos práticos</strong><small>SafeTec — conceitos, níveis de adoção e práticas de TI Verde.</small></div>
             <b>↗</b>
           </a>
+          <a href="https://www.ibm.com/br-pt/think/topics/green-computing" target="_blank" rel="noreferrer">
+            <span>11</span>
+            <div><strong>Computação verde</strong><small>IBM Think — desafios de adoção, ciclo de vida dos equipamentos e prioridades na TI.</small></div>
+            <b>↗</b>
+          </a>
         </div>
       </div>
     </section>
@@ -592,6 +665,7 @@
             <a href="#sobre">O conceito</a>
             <a href="#atuacao">Na prática</a>
             <a href="#data-centers">Data centers</a>
+            <a href="#desafios">Desafios</a>
             <a href="#acoes">Atitudes práticas</a>
           </nav>
 
