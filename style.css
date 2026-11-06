@@ -284,17 +284,6 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
 .home-convite .botao:hover { background: linear-gradient(100deg, var(--verde-escuro), var(--verde)); box-shadow: 0 13px 28px rgba(11,57,46,0.23); }
 .home-introducao .botao:focus-visible, .home-convite .botao:focus-visible { outline-color: var(--verde-escuro); }
 
-.pesquisa-convite { position: relative; overflow: hidden; color: var(--branco); background: linear-gradient(120deg, #082f27, #0b392e 58%, #104936); }
-.pesquisa-convite::before { position: absolute; top: -230px; right: 7%; width: 430px; height: 430px; border: 1px solid rgba(185,215,170,0.2); border-radius: 50%; box-shadow: 0 0 0 34px rgba(185,215,170,0.035), 0 0 0 76px rgba(185,215,170,0.025); content: ""; pointer-events: none; }
-.pesquisa-conteudo { position: relative; z-index: 1; display: flex; min-height: 310px; align-items: center; justify-content: space-between; gap: 48px; padding-top: 56px; padding-bottom: 56px; }
-.pesquisa-conteudo > div { max-width: 700px; }
-.pesquisa-convite .etiqueta { display: inline-flex; margin-bottom: 14px; padding: 8px 12px; color: var(--verde-escuro); border-radius: 999px; background: var(--verde-claro); font-size: 0.68rem; }
-.pesquisa-convite h2 { max-width: 680px; margin-bottom: 14px; color: var(--branco); font-family: var(--sans); font-size: clamp(2rem, 3.8vw, 3.1rem); font-weight: 700; letter-spacing: -1.8px; line-height: 1.08; }
-.pesquisa-convite .pesquisa-conteudo > div > p:last-child { max-width: 620px; margin: 0; color: #d3e2d8; font-size: 0.98rem; line-height: 1.7; }
-.pesquisa-convite .botao { flex: 0 0 auto; min-height: 54px; color: var(--verde-escuro); border-radius: 999px; background: var(--verde-claro); box-shadow: 0 12px 26px rgba(0,0,0,0.18); }
-.pesquisa-convite .botao:hover { background: #d2e8c1; box-shadow: 0 16px 30px rgba(0,0,0,0.24); }
-.pesquisa-convite .botao:focus-visible { outline-color: var(--verde-claro); }
-
 .cards-conceito { display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; gap: 17px; margin-top: 90px; }
 .card-conceito { min-height: 290px; position: relative; padding: 24px; overflow: hidden; border: 1px solid #d6dacb; background: linear-gradient(155deg, #ffffff 0%, #f0f5ec 100%); box-shadow: 0 10px 28px rgba(11,57,46,0.05), inset 0 0 0 1px rgba(255,255,255,0.55); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease; }
 .card-conceito::before {
@@ -762,9 +751,6 @@ h3 { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.25; }
   .home-tema { width: min(100%, 260px); padding: 30px; }
   .home-convite { flex-direction: column; align-items: flex-start; padding: 27px 23px; }
   .home-convite .botao { width: 100%; justify-content: space-between; }
-  .pesquisa-conteudo { min-height: 0; align-items: stretch; flex-direction: column; gap: 25px; padding-top: 48px; padding-bottom: 48px; }
-  .pesquisa-convite h2 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); letter-spacing: -1.2px; }
-  .pesquisa-convite .botao { width: 100%; justify-content: space-between; }
   .cards-conceito, .grade-atuacao, .estrategias-grid, .empresas-grid, .ods-grid { grid-template-columns: 1fr; }
   .atuacao-midia { margin: -8px auto 38px; }
   .atuacao-midia { border-radius: 12px; }
